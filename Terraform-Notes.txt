@@ -1,0 +1,17 @@
+Terraform-->is a openource IAAC Tool developed by hashicorp
+    -->Using TF we can write the code to define and provision infrastructure using a a declarative configuration language called hashicorp configuration language(HCL)
+    -->We can also write the code for creating the resources like compute,storage,databases,network etc
+    -->Multi-Cloud Support
+
+Declarative approach -- we can define the desired state of our infrastructure(what do you want) and we can avoid manual errors
+
+State management--it will keeps the track of our infrastructure in a state file 
+
+plan and preview changes
+reusable and modular code 
+cost efficiency
+collaboration
+automation
+scale and recreate 
+community
+configuration-->planning-->execution

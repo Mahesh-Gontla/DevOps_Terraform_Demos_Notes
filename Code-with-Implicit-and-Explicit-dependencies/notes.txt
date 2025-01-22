@@ -1,0 +1,36 @@
+dependencies-->implicit and explicit
+
+saikiranpi-->github repo-->Git-Terra 
+implicit dependencies-->vpc with their related sub components like Subnets,RT's,IGW...etc.,
+
+create three s3 buckets using TF 
+
+I want to create my vpc configuration first then s3 bucket has to be create 
+We can achieve this by using the explicit dependency
+
+depends_on = [aw_route_table_association.public]
+the bucket will create after the route table association 
+
+i want to create my second bucket after first bucket creation and want to create third bucket after the second bucket creation 
+For this we can use nested depends_on
+
+depends_on = [aws_s3_bucket.nameoftheresourceofs3bucket]
+
+variables and terraform.tfvars
+
+create before destroy +/-
+prevent to destroy -/+
+
+change the key name in variables  like wrong key --ke-->Terraform will delete the entire instance and will recreate it
+
+google-->create before destroy terraform
+
+lifecycle{
+  prevent_destroy = true
+}
+
+lifecycle{
+  create_before_destroy = true
+}
+
+

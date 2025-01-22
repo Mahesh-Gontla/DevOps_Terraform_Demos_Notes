@@ -133,3 +133,18 @@ resource "aws_s3_bucket" "mys3-bucket-demo-0003" {
   }
   depends_on = [ aws_s3_bucket.mys3-bucket-demo-0002 ]
 }
+
+#create before destroy +/-
+#prevent to destroy -/+
+
+#change the key name in variables  like wrong key --ke-->Terraform will delete the entire instance and will recreate it
+
+#google-->create before destroy terraform
+
+#lifecycle{
+  #prevent_destroy = true
+#}
+
+#lifecycle{
+ # create_before_destroy = true
+#}
